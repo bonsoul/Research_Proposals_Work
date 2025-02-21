@@ -1,4 +1,6 @@
 # KenaAfri_Dashboard_Interview_test
+
+[Visit the Dashboard](https://bonsoul.github.io/KenaAfri_Dashboard_Interview_test/)
 ____________________________________________________________________________________________________________________________________________
 ## Questions:
 Summarize the data attached in a presentable format and answer the following questions:
