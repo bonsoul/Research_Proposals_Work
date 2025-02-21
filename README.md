@@ -1,8 +1,4 @@
 # KenaAfri_Dashboard_Interview_test
-
-I stepped to a certain interview and the technical Interview had this challenge!
-
-Don't ask if I hacked it or not, just check it out for your next opportunity or gig.🤑🤓
 ____________________________________________________________________________________________________________________________________________
 ## Questions:
 Summarize the data attached in a presentable format and answer the following questions:
