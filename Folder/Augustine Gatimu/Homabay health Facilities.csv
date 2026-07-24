@@ -1,0 +1,200 @@
+Country,Admin1,Facility_n,Facility_t,Ownership,Lat,Long,LL_source
+Kenya,Homa Bay,Adiedo Dispensary,Dispensary,MoH,-0.426000000000000,34.606400000000000,GPS
+Kenya,Homa Bay,Agawo Dispensary,Dispensary,MoH,-0.473500000000000,34.787399999999900,Google Earth
+Kenya,Homa Bay,Alum Beach Dispensary,Dispensary,MoH,-0.447100000000000,34.486899999999900,Google Earth
+Kenya,Homa Bay,Amani Mary Ballard Medical Clinic,Clinic,CBO,-0.485400000000000,34.763300000000000,Google Earth
+Kenya,Homa Bay,Amoyo Dispensary,Dispensary,MoH,-0.823000000000000,34.356000000000000,Google Earth
+Kenya,Homa Bay,Ang'iya Dispensary,Dispensary,MoH,-0.731300000000000,34.522700000000000,GPS
+Kenya,Homa Bay,Asumbi Annex Dispensary,Dispensary,FBO,-0.624600000000000,34.503599999999900,Google Earth
+Kenya,Homa Bay,Asumbi Health Centre,Health Centre,FBO,-0.617500000000000,34.617400000000000,GPS
+Kenya,Homa Bay,Atela Dispensary,Dispensary,MoH,-0.425300000000000,34.996099999999900,Google Earth
+Kenya,Homa Bay,Atemo Health Centre,Health Centre,FBO,-0.503000000000000,34.832900000000000,Google Earth
+Kenya,Homa Bay,Bondo Awino Dispensary,Dispensary,FBO,-0.450700000000000,34.697600000000000,Google Earth
+Kenya,Homa Bay,Chuowe Dispensary,Dispensary,MoH,-0.321400000000000,34.770800000000000,Google Earth
+Kenya,Homa Bay,Chuthber Dispensary,Dispensary,MoH,-0.398900000000000,34.723700000000000,Google Earth
+Kenya,Homa Bay,Gendia Mission Hospital,Mission Hospital,FBO,-0.401300000000000,34.664499999999900,GPS
+Kenya,Homa Bay,Godber Dispensary,Dispensary,MoH,-0.523200000000000,34.794300000000000,Google Earth
+Kenya,Homa Bay,Godbura Health Centre,Health Centre,MoH,-0.722400000000000,34.085099999999900,GPS
+Kenya,Homa Bay,Gongo Dispensary,Dispensary,CBO,-0.528200000000000,34.620500000000000,GPS
+Kenya,Homa Bay,Good Shepherd Ang'iya Dispensary,Dispensary,FBO,-0.734100000000000,34.522500000000000,Google Earth
+Kenya,Homa Bay,Got Kamondi Dispensary,Dispensary,MoH,-0.500000000000000,34.716700000000000,Geonames
+Kenya,Homa Bay,Got Kojowi Health Centre,Health Centre,MoH,-0.761700000000000,34.265099999999900,GPS
+Kenya,Homa Bay,Got Oyaro Dispensary,Dispensary,MoH,-0.394500000000000,34.532600000000000,Google Earth
+Kenya,Homa Bay,Holy Family Oriang Mission Dispensary,Dispensary,FBO,-0.445400000000000,34.921399999999900,Google Earth
+Kenya,Homa Bay,Homa Bay County Teaching and Referral Hospital,County Referral Hospital,MoH,-0.530500000000000,34.460599999999900,GPS
+Kenya,Homa Bay,Homa Hills Health Centre,Health Centre,NGO,-0.353800000000000,34.468299999999900,Google Earth
+Kenya,Homa Bay,Homa Lime Health Centre,Health Centre,MoH,-0.355300000000000,34.465299999999900,GPS
+Kenya,Homa Bay,Hope Compassionate ACK Dispensary,Dispensary,FBO,-0.534200000000000,34.460200000000000,GPS
+Kenya,Homa Bay,Kabondo Sub-District Hospital,Sub-District Hospital,MoH,-0.420800000000000,34.874400000000000,Google Earth
+Kenya,Homa Bay,Kachuth Dispensary,Dispensary,MoH,-0.731500000000000,34.363300000000000,Google Earth
+Kenya,Homa Bay,Kadhola Dispensary,Dispensary,MoH,-0.811200000000000,34.289499999999900,Google Earth
+Kenya,Homa Bay,Kageno Dispensary,Dispensary,CBO,-0.457800000000000,34.276499999999900,GPS
+Kenya,Homa Bay,Kager Dispensary,Dispensary,NGO,-0.625800000000000,34.363000000000000,GPS
+Kenya,Homa Bay,Kajieyi Dispensary,Dispensary,MoH,-0.373400000000000,34.739300000000000,GPS
+Kenya,Homa Bay,Kamasengere Dispensary,Dispensary,FBO,-0.421500000000000,34.143099999999900,GPS
+Kenya,Homa Bay,Kandiege Sub-District Hospital,Sub-District Hospital,MoH,-0.426700000000000,34.552999999999900,GPS
+Kenya,Homa Bay,Kangri Dispensary,Dispensary,MoH,-0.350200000000000,34.614699999999900,GPS
+Kenya,Homa Bay,Kasewe Dispensary,Dispensary,MoH,-0.444000000000000,34.444000000000000,GPS
+Kenya,Homa Bay,Kauma Health Centre,Health Centre,MoH,-0.404100000000000,34.823399999999900,Google Earth
+Kenya,Homa Bay,Kendu Adventist Hospital,Mission Hospital,FBO,-0.401400000000000,34.664400000000000,Google Earth
+Kenya,Homa Bay,Kendu Sub-District Hospital,Sub-District Hospital,MoH,-0.369500000000000,34.650399999999900,GPS
+Kenya,Homa Bay,Kiasa Dispensary,Dispensary,MoH,-0.753000000000000,34.301800000000000,Google Earth
+Kenya,Homa Bay,Kiembe Dispensary,Dispensary,MoH,-0.653600000000000,34.133800000000000,Other
+Kenya,Homa Bay,Kigwa Dispensary,Dispensary,MoH,-0.674700000000000,34.208399999999900,Google Earth
+Kenya,Homa Bay,Kijawa Dispensary,Dispensary,MoH,-0.620200000000000,34.470199999999900,Google Earth
+Kenya,Homa Bay,Kijebi Dispensary,Dispensary,MoH,-0.725500000000000,34.053699999999900,Google Earth
+Kenya,Homa Bay,Kimonge Dispensary,Dispensary,MoH,-0.518400000000000,34.811100000000000,GPS
+Kenya,Homa Bay,Kisaku Dispensary,Dispensary,MoH,-0.661700000000000,34.109099999999900,Google Earth
+Kenya,Homa Bay,Kisegi Sub-District Hospital,Sub-District Hospital,MoH,-0.646500000000000,34.057499999999900,Google Earth
+Kenya,Homa Bay,Kitare Health Centre,Health Centre,MoH,-0.505800000000000,34.330599999999900,GPS
+Kenya,Homa Bay,Kiwa Island Dispensary,Dispensary,MoH,-0.751300000000000,34.033099999999900,Google Earth
+Kenya,Homa Bay,Kobodo Dispensary,Dispensary,MoH,-0.458700000000000,34.542600000000000,GPS
+Kenya,Homa Bay,Kobuya Dispensary,Dispensary,MoH,-0.351400000000000,34.786900000000000,Google Earth
+Kenya,Homa Bay,Kodula Dispensary,Dispensary,MoH,-0.345100000000000,34.789999999999900,GPS
+Kenya,Homa Bay,Koduogo Dispensary,Dispensary,MoH,-0.570000000000000,34.399999999999900,GPS
+Kenya,Homa Bay,Kogweno Oriang' Dispensary,Dispensary,MoH,-0.363900000000000,34.746299999999900,GPS
+Kenya,Homa Bay,Kokech Mirondo Health Centre,Health Centre,MoH,-0.504600000000000,34.692000000000000,GPS
+Kenya,Homa Bay,Kokwanyo Health Centre,Health Centre,MoH,-0.402900000000000,34.772100000000000,GPS
+Kenya,Homa Bay,Kome Dispensary,Dispensary,MoH,-0.665200000000000,34.383299999999900,Google Earth
+Kenya,Homa Bay,Kosele Dispensary,Dispensary,MoH,-0.430100000000000,34.689000000000000,GPS
+Kenya,Homa Bay,Koywech Dispensary,Dispensary,MoH,-0.442700000000000,34.724200000000000,Google Earth
+Kenya,Homa Bay,Kwamo Dispensary,Dispensary,CBO,-0.713000000000000,34.308799999999900,Google Earth
+Kenya,Homa Bay,Lambwe Dispensary,Dispensary,MoH,-0.556000000000000,34.324500000000000,Google Earth
+Kenya,Homa Bay,Lambwe Forest Dispensary,Dispensary,MoH,-0.572500000000000,34.368699999999900,GPS
+Kenya,Homa Bay,Lela Community Dispensary,Dispensary,MoH,-0.358500000000000,34.710700000000000,Google Earth
+Kenya,Homa Bay,Lwanda Awiti Dispensary,Dispensary,MoH,-0.796500000000000,34.276000000000000,Google Earth
+Kenya,Homa Bay,Lwanda Gwassi Dispensary,Dispensary,MoH,-0.755400000000000,34.094600000000000,Google Earth
+Kenya,Homa Bay,Lwanda Kobita Dispensary,Dispensary,MoH,-0.462000000000000,34.323999999999900,GPS
+Kenya,Homa Bay,Magao Dispensary,Dispensary,MoH,-0.346800000000000,34.593000000000000,GPS
+Kenya,Homa Bay,Magina Health Centre,Health Centre,MoH,-0.686100000000000,34.515900000000000,GPS
+Kenya,Homa Bay,Magunga Health Centre,Health Centre,MoH,-0.689100000000000,34.149400000000000,GPS
+Kenya,Homa Bay,Makongeni Health Centre,Health Centre,MoH,-0.530000000000000,34.500000000000000,GPS
+Kenya,Homa Bay,Malela Dispensary,Dispensary,MoH,-0.584900000000000,34.391900000000000,GPS
+Kenya,Homa Bay,Malongo Dispensary,Dispensary,MoH,-0.641700000000000,34.056699999999900,GPS
+Kenya,Homa Bay,Mangima SDA Health Centre,Health Centre,FBO,-0.559400000000000,34.706299999999900,GPS
+Kenya,Homa Bay,Manyatta SDA Dispensary,Dispensary,FBO,-0.505900000000000,34.619599999999900,GPS
+Kenya,Homa Bay,Maram Dispensary,Dispensary,MoH,-0.675300000000000,34.546799999999900,Google Earth
+Kenya,Homa Bay,Marindi Sub county Hospital,Sub-District Hospital,MoH,-0.648400000000000,34.518700000000000,GPS
+Kenya,Homa Bay,Mary Ballard Community Clinic,Clinic,CBO,-0.486900000000000,34.770000000000000,Google Earth
+Kenya,Homa Bay,Masogo Dispensary,Dispensary,MoH,-0.424100000000000,34.826500000000000,GPS
+Kenya,Homa Bay,Mawego Health Centre,Health Centre,FBO,-0.389600000000000,34.770400000000000,GPS
+Kenya,Homa Bay,Mbita District Hospital,District Hospital,MoH,-0.422500000000000,34.208199999999900,Google Earth
+Kenya,Homa Bay,Mbita Port Florence Community Dispensary,Dispensary,NGO,-0.423900000000000,34.207299999999900,Google Earth
+Kenya,Homa Bay,Midodo Obuya Joy Haugesend Dispensary,Dispensary,FBO,-0.806400000000000,34.439399999999900,GPS
+Kenya,Homa Bay,Miniambo Dispensary,Dispensary,MoH,-0.536900000000000,34.488300000000000,Google Earth
+Kenya,Homa Bay,Miorre Dispensary,Dispensary,MoH,-0.505500000000000,34.237200000000000,GPS
+Kenya,Homa Bay,Miriu Health Centre Homa Bay,Health Centre,MoH,-0.355100000000000,34.755699999999900,Google Earth
+Kenya,Homa Bay,Mirogi Health Centre,Health Centre,FBO,-0.696700000000000,34.384500000000000,GPS
+Kenya,Homa Bay,Msare Health Centre,Health Centre,MoH,-0.578500000000000,34.186500000000000,GPS
+Kenya,Homa Bay,Mukende Health Centre,Health Centre,MoH,-0.520100000000000,34.195099999999900,GPS
+Kenya,Homa Bay,Mukuyu Health Centre,Health Centre,MoH,0.000000000000000,0.000000000000000,
+Kenya,Homa Bay,Ndere Community Dispensary,Dispensary,MoH,-0.394100000000000,34.463299999999900,GPS
+Kenya,Homa Bay,Ndhiwa Sub-District Hospital,Sub-District Hospital,MoH,-0.731700000000000,34.366999999999900,GPS
+Kenya,Homa Bay,Ndhuru Dispensary,Dispensary,MoH,-0.512100000000000,34.414700000000000,Google Earth
+Kenya,Homa Bay,Ndiru Health Centre,Health Centre,MoH,-0.610400000000000,34.510399999999900,GPS
+Kenya,Homa Bay,Ndisi Dispensary,Dispensary,MoH,-0.680700000000000,34.346899999999900,Google Earth
+Kenya,Homa Bay,Nduga Dispensary,Dispensary,MoH,-0.580000000000000,34.600000000000000,Google Earth
+Kenya,Homa Bay,Ngegu Dispensary,Dispensary,MoH,-0.492500000000000,34.510199999999900,Google Earth
+Kenya,Homa Bay,Ngeri Dispensary,Dispensary,MoH,-0.598200000000000,34.103999999999900,GPS
+Kenya,Homa Bay,Ngeta Dispensary,Dispensary,MoH,-0.363900000000000,34.580500000000000,GPS
+Kenya,Homa Bay,Ng'odhe Dispensary,Dispensary,MoH,-0.493800000000000,34.363799999999900,GPS
+Kenya,Homa Bay,Ng'odhe Island Dispensary,Dispensary,MoH,-0.352500000000000,34.190399999999900,GPS
+Kenya,Homa Bay,Nguku Dispensary,Dispensary,MoH,-0.794900000000000,34.367300000000000,GPS
+Kenya,Homa Bay,Nyabola Dispensary,Dispensary,MoH,-0.600800000000000,34.643099999999900,GPS
+Kenya,Homa Bay,Nyadenda Health Centre,Health Centre,MoH,-0.611000000000000,34.246499999999900,GPS
+Kenya,Homa Bay,Nyagoro Health Centre,Health Centre,MoH,-0.515600000000000,34.535499999999900,Google Earth
+Kenya,Homa Bay,Nyagowa Elck Dispensary,Dispensary,FBO,-0.519800000000000,34.676499999999900,GPS
+Kenya,Homa Bay,Nyagwethe Dispensary,Dispensary,FBO,-0.610900000000000,34.097999999999900,GPS
+Kenya,Homa Bay,Nyakweri Dispensary,Dispensary,MoH,-0.434800000000000,34.021099999999900,GPS
+Kenya,Homa Bay,Nyalgosi Dispensary,Dispensary,MoH,-0.451900000000000,34.682099999999900,GPS
+Kenya,Homa Bay,Nyalkembo Dispensary,Dispensary,MoH,-0.606100000000000,34.238399999999900,GPS
+Kenya,Homa Bay,Nyalkinyi Jersey Dispensary,Dispensary,MoH,-0.532800000000000,34.493299999999900,GPS
+Kenya,Homa Bay,Nyamadede Community Dispensary,Dispensary,MoH,-0.646900000000000,34.181800000000000,Google Earth
+Kenya,Homa Bay,Nyamasi Dispensary,Dispensary,MoH,-0.624200000000000,34.452399999999900,GPS
+Kenya,Homa Bay,Nyambare Dispensary,Dispensary,MoH,-0.560000000000000,34.600000000000000,Google Earth
+Kenya,Homa Bay,Nyamrisra Health Centre,Health Centre,MoH,-0.570400000000000,34.096400000000000,Google Earth
+Kenya,Homa Bay,Nyandiwa Baptist Dispensary,Dispensary,FBO,-0.416400000000000,34.919600000000000,Google Earth
+Kenya,Homa Bay,Nyandiwa Dispensary,Dispensary,MoH,-0.724700000000000,34.051000000000000,Google Earth
+Kenya,Homa Bay,Nyangajo Dispensary,Dispensary,MoH,-0.404400000000000,34.646000000000000,GPS
+Kenya,Homa Bay,Nyangiela Dispensary,Dispensary,MoH,-0.539500000000000,34.707200000000000,GPS
+Kenya,Homa Bay,Nyaoga Community Dispensary,Dispensary,NGO,-0.349600000000000,34.520299999999900,GPS
+Kenya,Homa Bay,Nyarut Health Centre,Health Centre,MoH,-0.506400000000000,34.497500000000000,Google Earth
+Kenya,Homa Bay,Nyasore Dispensary,Dispensary,MoH,-0.484300000000000,34.888399999999900,Google Earth
+Kenya,Homa Bay,Nyatoto Health Centre,Health Centre,MoH,-0.553000000000000,34.270800000000000,GPS
+Kenya,Homa Bay,Nyawango Dispensary,Dispensary,MoH,-0.414600000000000,34.758600000000000,Google Earth
+Kenya,Homa Bay,Nyawawa Dispensary,Dispensary,MoH,-0.638000000000000,34.597000000000000,GPS
+Kenya,Homa Bay,Nyawita Dispensary,Dispensary,MoH,-0.570000000000000,34.600000000000000,Google Earth
+Kenya,Homa Bay,Obalwanda Dispensary,Dispensary,MoH,-0.481700000000000,34.270699999999900,GPS
+Kenya,Homa Bay,Obanga Health Centre,Health Centre,MoH,-0.686500000000000,34.077800000000000,GPS
+Kenya,Homa Bay,Ober Health Centre,Health Centre,MoH,-0.484400000000000,34.813800000000000,GPS
+Kenya,Homa Bay,Ober Kabuoch Dispensary,Dispensary,MoH,-0.766600000000000,34.439599999999900,Google Earth
+Kenya,Homa Bay,Obunga Dispensary,Dispensary,MoH,-0.557100000000000,34.626399999999900,Google Earth
+Kenya,Homa Bay,Obuya Dispensary,Dispensary,MoH,-0.530000000000000,34.600000000000000,Google Earth
+Kenya,Homa Bay,Obwanda Dispensary,Dispensary,MoH,-0.470900000000000,34.589500000000000,GPS
+Kenya,Homa Bay,Ogande Dispensary,Dispensary,FBO,-0.588200000000000,34.506599999999900,GPS
+Kenya,Homa Bay,Ogongo Sub-District Hospital,Sub-District Hospital,MoH,-0.574000000000000,34.370800000000000,Google Earth
+Kenya,Homa Bay,Ojwando Dispensary,Dispensary,MoH,-0.425000000000000,34.662500000000000,GPS
+Kenya,Homa Bay,Okiki Amayo Health Centre,Health Centre,MoH,-0.412000000000000,34.511400000000000,Google Earth
+Kenya,Homa Bay,Okok Dispensary,Dispensary,MoH,-0.682900000000000,34.428800000000000,Google Earth
+Kenya,Homa Bay,Olando Dispensary,Dispensary,MoH,-0.646500000000000,34.222700000000000,GPS
+Kenya,Homa Bay,Ombek Dispensary,Dispensary,MoH,-0.568400000000000,34.664200000000000,GPS
+Kenya,Homa Bay,Ombo Kachieng' Dispensary,Dispensary,MoH,-0.735600000000000,34.451099999999900,GPS
+Kenya,Homa Bay,Omboga Dispensary,Dispensary,MoH,-0.439200000000000,34.622900000000000,Google Earth
+Kenya,Homa Bay,Omiro Dispensary,Dispensary,MoH,-0.446200000000000,34.794499999999900,GPS
+Kenya,Homa Bay,Oneno Dispensary,Dispensary,MoH,-0.556900000000000,34.548400000000000,GPS
+Kenya,Homa Bay,Oneno Nam Dispensary,Dispensary,MoH,-0.392000000000000,34.679200000000000,Google Earth
+Kenya,Homa Bay,Ong'amo Dispensary,Dispensary,MoH,-0.495000000000000,34.662500000000000,GPS
+Kenya,Homa Bay,Opemble Dispensary,Dispensary,MoH,0.000000000000000,0.000000000000000,
+Kenya,Homa Bay,Orego Health Centre,Health Centre,MoH,-0.622100000000000,34.543999999999900,GPS
+Kenya,Homa Bay,Oriang SDA Health Centre,Health Centre,FBO,-0.443300000000000,34.926099999999900,GPS
+Kenya,Homa Bay,Oridi Dispensary,Dispensary,MoH,-0.778300000000000,34.378999999999900,Google Earth
+Kenya,Homa Bay,Oriwo Dispensary,Dispensary,MoH,-0.423200000000000,34.569499999999900,Google Earth
+Kenya,Homa Bay,Otange Dispensary,Dispensary,MoH,-0.818100000000000,34.378700000000000,GPS
+Kenya,Homa Bay,Othoro Health Centre,Health Centre,MoH,-0.532700000000000,34.586199999999900,GPS
+Kenya,Homa Bay,Oyuma Dispensary,Dispensary,MoH,-0.364800000000000,34.615299999999900,GPS
+Kenya,Homa Bay,Pala Health Centre,Health Centre,MoH,-0.716900000000000,34.372700000000000,GPS
+Kenya,Homa Bay,Pala Masogo Health Centre,Health Centre,MoH,-0.640000000000000,34.500000000000000,GPS
+Kenya,Homa Bay,Ponge Dispensary,Dispensary,MoH,-0.520600000000000,34.267600000000000,GPS
+Kenya,Homa Bay,Ponge Dispensary,Dispensary,MoH,-0.842000000000000,34.454500000000000,Google Earth
+Kenya,Homa Bay,Port Florence Community Hospital Clinic,Clinic,NGO,-0.540000000000000,34.500000000000000,Google Earth
+Kenya,Homa Bay,Rachuonyo District Hospital,District Hospital,MoH,-0.503100000000000,34.732300000000000,GPS
+Kenya,Homa Bay,Ragwe Dispensary,Dispensary,MoH,-0.521800000000000,34.661299999999900,Google Earth
+Kenya,Homa Bay,Rakwaro Dispensary,Dispensary,MoH,0.000000000000000,0.000000000000000,
+Kenya,Homa Bay,Randung' Dispensary,Dispensary,MoH,-0.635500000000000,34.562700000000000,Google Earth
+Kenya,Homa Bay,Rangwe SDA Dispensary,Dispensary,FBO,-0.598200000000000,34.583599999999900,GPS
+Kenya,Homa Bay,Rangwe Sub-District Hospital,Sub-District Hospital,MoH,-0.594700000000000,34.583100000000000,GPS
+Kenya,Homa Bay,Rariw Dispensary,Dispensary,MoH,-0.581000000000000,34.616700000000000,Google Earth
+Kenya,Homa Bay,Raruowa Health Centre,Health Centre,FBO,-0.411800000000000,34.556600000000000,GPS
+Kenya,Homa Bay,Remba Dispensary,Dispensary,MoH,-0.561100000000000,33.927900000000000,GPS
+Kenya,Homa Bay,Ringa Dispensary,Dispensary,FBO,-0.474600000000000,34.851500000000000,GPS
+Kenya,Homa Bay,Ringiti Dispensary,Dispensary,MoH,0.454700000000000,33.988999999999900,Google Earth
+Kenya,Homa Bay,Seka Health Centre,Health Centre,MoH,-0.758100000000000,34.166600000000000,Google Earth
+Kenya,Homa Bay,Sena Health Centre,Health Centre,MoH,-0.468300000000000,34.064300000000000,Google Earth
+Kenya,Homa Bay,Shirikisho Dispensary,Dispensary,FBO,-0.512300000000000,34.730899999999900,Google Earth
+Kenya,Homa Bay,Simbi Kogembo Dispensary,Dispensary,MoH,-0.355500000000000,34.624400000000000,GPS
+Kenya,Homa Bay,Sino Dispensary,Dispensary,MoH,-0.467800000000000,34.753599999999900,GPS
+Kenya,Homa Bay,Soklo Dispensary,Dispensary,MoH,-0.463000000000000,34.032699999999900,GPS
+Kenya,Homa Bay,St Francis of Assis Dispensary,Dispensary,FBO,-0.529300000000000,34.748399999999900,GPS
+Kenya,Homa Bay,St Luke's Health Centre,Health Centre,FBO,-0.475900000000000,34.064100000000000,GPS
+Kenya,Homa Bay,St Mary's Health Centre,Health Centre,FBO,-0.436500000000000,34.203899999999900,Google Earth
+Kenya,Homa Bay,St Mercelline Roo Dispensary,Dispensary,FBO,-0.553300000000000,34.133600000000000,GPS
+Kenya,Homa Bay,St Paul's Health Centre,Health Centre,FBO,-0.522800000000000,34.462400000000000,GPS
+Kenya,Homa Bay,Suba District Hospital,District Hospital,MoH,-0.588800000000000,34.162500000000000,Google Earth
+Kenya,Homa Bay,Takawiri Dispensary,Dispensary,MoH,-0.474400000000000,34.086500000000000,Google Earth
+Kenya,Homa Bay,Tala Dispensary,Dispensary,MoH,-0.443600000000000,34.838000000000000,GPS
+Kenya,Homa Bay,Tom Mboya Memorial Health Centre,Health Centre,MoH,-0.400200000000000,34.164099999999900,GPS
+Kenya,Homa Bay,Tonga Health Centre,Health Centre,FBO,-0.690300000000000,34.119999999999900,GPS
+Kenya,Homa Bay,Ugina Health Centre,Health Centre,MoH,-0.477400000000000,33.988799999999900,GPS
+Kenya,Homa Bay,Unga Dispensary,Dispensary,MoH,-0.759800000000000,34.413400000000000,GPS
+Kenya,Homa Bay,Usao Health Centre,Health Centre,MoH,-0.474800000000000,34.383499999999900,GPS
+Kenya,Homa Bay,Viagenco Medical Centre,Clinic,NGO,-0.474700000000000,34.286499999999900,Google Earth
+Kenya,Homa Bay,Wagwe Health Centre,Health Centre,MoH,-0.349100000000000,34.567900000000000,GPS
+Kenya,Homa Bay,Wakula Health Centre,Health Centre,MoH,-0.451000000000000,33.988100000000000,GPS
+Kenya,Homa Bay,Waware Dispensary,Dispensary,MoH,-0.391200000000000,34.215899999999900,Google Earth
+Kenya,Homa Bay,Wiga Dispensary,Dispensary,MoH,-0.566200000000000,34.475800000000000,Google Earth
+Kenya,Homa Bay,Wikondiek Dispensary,Dispensary,MoH,-0.472500000000000,34.623500000000000,GPS
+Kenya,Homa Bay,Wikoteng Dispensary,Dispensary,MoH,-0.607400000000000,34.627800000000000,Google Earth
+Kenya,Homa Bay,Wire Dispensary,Dispensary,FBO,-0.485000000000000,34.754500000000000,GPS
+Kenya,Homa Bay,Yala Dispensary,Dispensary,MoH,-0.488800000000000,34.671599999999900,GPS
+Kenya,Homa Bay,Yokia Dispensary,Dispensary,MoH,-0.437100000000000,34.039200000000000,Google Earth
+Kenya,Homabay,Kamuchisu Dispensary,Dispensary,MoH,-0.439300000000000,34.770299999999900,GPS
