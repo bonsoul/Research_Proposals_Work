@@ -1,0 +1,299 @@
+---
+title: "HIV-Free Survival Among HIV-Exposed Infants — Homa Bay County"
+subtitle: "Objectives 1.4.1–1.4.2 and Hypotheses 1.5(1)–1.5(5)"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 6)
+
+pkgs <- c("readxl", "dplyr", "tidyr", "survival", "survminer", "broom",
+          "gtsummary", "spdep", "sf", "car", "knitr", "kableExtra", "ggplot2")
+new  <- pkgs[!pkgs %in% installed.packages()[, "Package"]]
+if (length(new)) install.packages(new, repos = "https://cloud.r-project.org")
+invisible(lapply(pkgs, library, character.only = TRUE))
+
+kbl2 <- function(df, caption, digits = 3) {
+  df %>%
+    knitr::kable(caption = caption, digits = digits, format = "html") %>%
+    kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                               full_width = FALSE, position = "left")
+}
+```
+
+# 1. Import & clean
+
+```{r import}
+raw <- readxl::read_excel("~/Research_Proposals_Work/Folder/Augustine Gatimu/HOMABAY DATASET.csv.xlsx", sheet = "HOMABAY DATASET")
+
+df <- raw %>%
+  mutate(across(where(is.character), ~ trimws(tolower(.x)))) %>%
+  mutate(
+    time  = as.numeric(`_t`),
+    event = ifelse(is.na(`_d`), 0, `_d`),
+    event = as.numeric(event),
+
+    maritalstatus       = factor(maritalstatus, levels = c("married", "single", "widowed")),
+    residence            = factor(residence, levels = c("rural", "urban")),
+    employmentstatus     = factor(employmentstatus),
+    ancattendance        = factor(ancattendance, levels = c("no", "yes")),
+    facilitylevelanc     = factor(facilitylevelanc),
+    distancetofacility   = factor(distancetofacility, levels = c("below 1 km", "1-5 km", "above 5 km")),
+    hivstatusbeforepregnancy = factor(hivstatusbeforepregnancy),
+    syphillis            = factor(syphillis, levels = c("negative", "positive")),
+    uti                  = factor(uti, levels = c("no", "yes")),
+    miscarriage          = factor(miscarriage, levels = c("no", "yes")),
+    abortion             = factor(abortion, levels = c("no", "yes")),
+    stillbirth           = factor(stillbirth, levels = c("no", "yes")),
+    premature            = factor(premature, levels = c("no", "yes")),
+    haartduringpregnancy = factor(haartduringpregnancy, levels = c("no", "yes")),
+    cd4cellcountcellsmm3 = factor(cd4cellcountcellsmm3,
+                                   levels = c("below 200", "200-500", ">300", "above 500")),
+    historyofstiduringpregnancy = factor(historyofstiduringpregnancy, levels = c("no", "yes")),
+    genitalwart          = factor(genitalwart, levels = c("no", "yes")),
+    vaginaldischargesyndrome = factor(vaginaldischargesyndrome, levels = c("no", "yes")),
+    genitalherpes        = factor(genitalherpes, levels = c("no", "yes")),
+    treatedduringpregnancy = factor(treatedduringpregnancy, levels = c("no", "yes")),
+    malaria              = factor(malaria, levels = c("no", "yes")),
+    anaemia              = factor(anaemia, levels = c("no", "yes")),
+    hypertention         = factor(hypertention, levels = c("no", "yes")),
+    patnershivstatus     = factor(patnershivstatus),
+    whohivdiseasestage   = factor(whohivdiseasestage, levels = c("stage i", "stage ii", "stage iii", "stage iv")),
+    tmembraner           = factor(tmembraner),
+    educationlevel        = factor(educationlevel,
+                                    levels = c("never attended school", "primary", "secondary", "college")),
+    adherence             = factor(adherence, levels = c("poor", "fair", "good")),
+    sexofthebaby          = factor(sexofthebaby, levels = c("female", "male")),
+    subcounty             = factor(subcounty),
+
+    age = as.numeric(age), weightkg = as.numeric(weightkg),
+    bwtkgs = as.numeric(bwtkgs), babywt6wks = as.numeric(babywt6wks),
+    gestationatfirstancwks = as.numeric(gestationatfirstancwks),
+    numberofchildren = as.numeric(numberofchildren),
+    numberofancvisitsmade = as.numeric(numberofancvisitsmade),
+    hemoglobinlevelduringpregnancy = as.numeric(hemoglobinlevelduringpregnancy),
+    durationofbfmonths = as.numeric(durationofbfmonths),
+
+    lon = as.numeric(var51), lat = as.numeric(var52)
+  ) %>%
+  filter(!is.na(time), time > 0)
+
+maternal_vars <- c("age","weightkg","maritalstatus","residence","employmentstatus",
+                    "ancattendance","facilitylevelanc","distancetofacility",
+                    "gestationatfirstancwks","hivstatusbeforepregnancy","syphillis","uti",
+                    "miscarriage","abortion","stillbirth","premature","haartduringpregnancy",
+                    "cd4cellcountcellsmm3","historyofstiduringpregnancy","genitalwart",
+                    "vaginaldischargesyndrome","genitalherpes","treatedduringpregnancy",
+                    "malaria","anaemia","hypertention","numberofchildren","patnershivstatus",
+                    "whohivdiseasestage","numberofancvisitsmade","hemoglobinlevelduringpregnancy",
+                    "tmembraner","educationlevel","adherence")
+
+infant_vars <- c("bwtkgs","babywt6wks","durationofbfmonths","sexofthebaby")
+```
+
+# 2. Objective 1 — HIV-free survival rate
+
+```{r km}
+surv_obj    <- Surv(time = df$time, event = df$event)
+km_overall  <- survfit(surv_obj ~ 1, data = df)
+
+surv_table <- summary(km_overall, times = c(6, 12, 24, 52, 78))
+data.frame(time_weeks = surv_table$time, n_risk = surv_table$n.risk,
+           n_event = surv_table$n.event, survival = surv_table$surv,
+           lower95 = surv_table$lower, upper95 = surv_table$upper) %>%
+  kbl2("Kaplan-Meier HIV-free survival probability at selected follow-up times")
+
+ggsurvplot(km_overall, data = df, risk.table = TRUE, conf.int = TRUE,
+           xlab = "Time (weeks)", ylab = "HIV-free survival probability",
+           title = "Kaplan-Meier HIV-free survival: HIV-exposed infants, Homa Bay")
+```
+
+# 3. Objective 2 — Maternal factors (H0 1 & 2)
+
+```{r maternal-univ}
+univ_cox <- function(var, data) {
+  f <- as.formula(paste("Surv(time, event) ~", var))
+  m <- coxph(f, data = data)
+  broom::tidy(m, exponentiate = TRUE, conf.int = TRUE) %>% mutate(variable = var)
+}
+
+maternal_univ <- bind_rows(lapply(maternal_vars, univ_cox, data = df))
+
+maternal_univ %>%
+  select(variable, term, HR = estimate, lower95 = conf.low, upper95 = conf.high, p.value) %>%
+  kbl2("Univariate Cox regression — maternal factors")
+
+sig_maternal <- maternal_univ %>% filter(p.value < 0.20) %>% pull(variable) %>% unique()
+f_maternal   <- as.formula(paste("Surv(time, event) ~", paste(sig_maternal, collapse = " + ")))
+cox_maternal <- coxph(f_maternal, data = df)
+
+broom::tidy(cox_maternal, exponentiate = TRUE, conf.int = TRUE) %>%
+  select(term, HR = estimate, lower95 = conf.low, upper95 = conf.high, p.value) %>%
+  kbl2("Multivariable Cox model — maternal factors (adjusted, p<0.20 screened)")
+```
+
+# 4. Objective 3 — Infant factors
+
+```{r infant-univ}
+infant_univ <- bind_rows(lapply(infant_vars, univ_cox, data = df))
+
+infant_univ %>%
+  select(variable, term, HR = estimate, lower95 = conf.low, upper95 = conf.high, p.value) %>%
+  kbl2("Univariate Cox regression — infant factors")
+
+sig_infant <- infant_univ %>% filter(p.value < 0.20) %>% pull(variable) %>% unique()
+f_infant   <- as.formula(paste("Surv(time, event) ~", paste(sig_infant, collapse = " + ")))
+cox_infant <- coxph(f_infant, data = df)
+
+broom::tidy(cox_infant, exponentiate = TRUE, conf.int = TRUE) %>%
+  select(term, HR = estimate, lower95 = conf.low, upper95 = conf.high, p.value) %>%
+  kbl2("Multivariable Cox model — infant factors (adjusted, p<0.20 screened)")
+```
+
+# 5. Objective 4 — Final adjusted model of HIV-free survival (H0 3)
+
+```{r final-model}
+final_vars <- unique(c(sig_maternal, sig_infant))
+
+## one complete-case dataset across ALL candidate predictors so every model
+## step() compares during backward AIC selection is fit on the same rows
+df_final <- df %>% select(time, event, all_of(final_vars)) %>% tidyr::drop_na()
+
+f_final  <- as.formula(paste("Surv(time, event) ~", paste(final_vars, collapse = " + ")))
+cox_full <- coxph(f_final, data = df_final)
+
+cox_final <- step(cox_full, direction = "backward", trace = 0)
+
+broom::tidy(cox_final, exponentiate = TRUE, conf.int = TRUE) %>%
+  select(term, HR = estimate, lower95 = conf.low, upper95 = conf.high, p.value) %>%
+  kbl2(sprintf("Final multivariable Cox model (n = %d complete cases)", nrow(df_final)))
+```
+
+```{r ph-check}
+## transform = "identity" plots against raw time rather than KM-transformed
+## rank; with a fixed testing schedule (many tied times), the default "km"
+## transform can collapse the spline knots plot.cox.zph() relies on
+ph_test <- cox.zph(cox_final, transform = "identity")
+
+as.data.frame(ph_test$table) %>%
+  tibble::rownames_to_column("term") %>%
+  kbl2("Schoenfeld residual test for proportional hazards — tests H0(3): theta(t) = 0")
+
+## survminer's ggcoxzph uses a loess smoother (not ns()), so it doesn't hit
+## the "all interior knots match right boundary knot" failure that base
+## plot.cox.zph() can throw with heavily tied event times. Fall back to
+## plotting terms one at a time (skipping any that still fail) if needed.
+zph_plot <- tryCatch(
+  survminer::ggcoxzph(ph_test, font.main = 10),
+  error = function(e) NULL
+)
+if (!is.null(zph_plot)) {
+  print(zph_plot)
+} else {
+  terms <- rownames(ph_test$table)
+  terms <- terms[terms != "GLOBAL"]
+  for (tm in terms) {
+    p <- tryCatch(survminer::ggcoxzph(ph_test, var = tm, font.main = 10),
+                  error = function(e) NULL)
+    if (!is.null(p)) print(p) else message("Skipped PH plot for: ", tm, " (insufficient variation in residuals)")
+  }
+}
+
+car::vif(cox_final) %>%
+  as.data.frame() %>%
+  kbl2("Variance inflation factors — final model")
+
+ggforest(cox_final, data = df_final)
+```
+
+# 6. Spatial autocorrelation (H0 4 & 5)
+
+```{r spatial-test}
+df_geo <- df %>% filter(between(lon, 33.5, 42), between(lat, -5, 5.5))
+geo_pts <- df_geo %>% filter(!is.na(lon), !is.na(lat)) %>% select(lon, lat, event)
+
+coords <- as.matrix(geo_pts[, c("lon", "lat")])
+knn_nb <- spdep::knn2nb(spdep::knearneigh(coords, k = 6))
+lw     <- spdep::nb2listw(knn_nb, style = "W")
+
+moran_global <- spdep::moran.test(geo_pts$event, lw)
+data.frame(statistic = c("Moran's I", "Expected I", "Variance", "p-value"),
+           value = c(moran_global$estimate[1], moran_global$estimate[2],
+                     moran_global$estimate[3], moran_global$p.value)) %>%
+  kbl2("Global Moran's I — spatial autocorrelation of HIV antigen positivity")
+
+moran_mc <- spdep::moran.mc(geo_pts$event, lw, nsim = 999)
+data.frame(statistic = moran_mc$statistic, p_value = moran_mc$p.value) %>%
+  kbl2("Monte Carlo Moran's I (999 permutations)")
+```
+
+# 7. Mapping — patient distribution & HIV-positivity hotspots, Homa Bay County
+
+```{r boundary}
+## Homa Bay county boundary (falls back to GitHub source if local file absent)
+boundary_path <- "homabay_county_boundary.geojson"
+if (!file.exists(boundary_path)) {
+  boundary_path <- "https://raw.githubusercontent.com/mikelmaron/kenya-election-data/master/data/counties.geojson"
+}
+hb_raw <- sf::st_read(boundary_path, quiet = TRUE)
+if ("COUNTY_NAM" %in% names(hb_raw)) hb_raw <- hb_raw %>% filter(COUNTY_NAM == "HOMA BAY")
+homabay <- hb_raw %>% sf::st_make_valid() %>% summarise(geometry = sf::st_union(geometry))
+```
+
+```{r map-points}
+## keep only patient coordinates that genuinely fall inside Homa Bay County
+pts_sf <- df %>%
+  filter(!is.na(lon), !is.na(lat)) %>%
+  sf::st_as_sf(coords = c("lon", "lat"), crs = 4326, remove = FALSE)
+
+in_county   <- sf::st_within(pts_sf, homabay, sparse = FALSE)[, 1]
+pts_in_hb   <- pts_sf[in_county, ] %>%
+  mutate(hiv_status = factor(event, levels = c(0, 1), labels = c("Negative", "Positive")))
+
+cat("Patients with valid coordinates inside Homa Bay County:", nrow(pts_in_hb),
+    "of", nrow(df), "total records\n")
+
+ggplot() +
+  geom_sf(data = homabay, fill = "grey96", color = "grey40", linewidth = 0.5) +
+  geom_sf(data = pts_in_hb, aes(color = hiv_status), size = 2, alpha = 0.75) +
+  scale_color_manual(values = c("Negative" = "forestgreen", "Positive" = "red"),
+                      name = "Infant HIV\nantigen status") +
+  labs(title = "Distribution of HIV-exposed infants across Homa Bay County",
+       subtitle = "Red = HIV antigen positive · Green = negative",
+       x = NULL, y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid = element_blank())
+```
+
+```{r map-hotspot}
+## kernel-density hotspot surface for POSITIVE cases only
+pos_pts <- pts_in_hb %>% filter(event == 1)
+
+ggplot() +
+  geom_sf(data = homabay, fill = "grey96", color = "grey40", linewidth = 0.5) +
+  stat_density_2d(data = pos_pts, aes(x = lon, y = lat, fill = after_stat(level)),
+                   geom = "polygon", alpha = 0.6, color = NA) +
+  scale_fill_gradient(low = "yellow", high = "red", name = "Density of\npositive cases") +
+  geom_sf(data = pts_in_hb %>% filter(event == 0), color = "forestgreen", size = 1.3, alpha = 0.6) +
+  geom_sf(data = pos_pts, color = "darkred", size = 1.3) +
+  coord_sf(xlim = sf::st_bbox(homabay)[c("xmin","xmax")],
+           ylim = sf::st_bbox(homabay)[c("ymin","ymax")]) +
+  labs(title = "HIV antigen positivity hotspot map, Homa Bay County",
+       subtitle = "Red/yellow surface = kernel density of positive cases · green points = negative",
+       x = NULL, y = NULL) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid = element_blank())
+```
+
+# 8. Summary table
+
+```{r summary-table}
+gtsummary::tbl_regression(cox_final, exponentiate = TRUE) %>%
+  gtsummary::as_kable_extra(caption = "Final model summary") %>%
+  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = FALSE)
+```
