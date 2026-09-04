@@ -1,51 +1,63 @@
-# KenaAfri_Dashboard_Interview_test
+# Research Proposals Work
 
-[Visit the Dashboard](https://bonsoul.github.io/KenaAfri_Dashboard_Interview_test/)
-____________________________________________________________________________________________________________________________________________
-## Questions:
-Summarize the data attached in a presentable format and answer the following questions:
+This repository contains research proposals, thesis materials, datasets, presentations, and analysis scripts from several health and epidemiology projects.
 
-1. Which 3 insights can you draw from the Primary Raw data? 
-2. Which 3 insights can you draw from the Secondary Raw data? 
-3. Is there a correlation between the insights from the Primary data and insights from the Secondary raw data?
-4. Based on your analysis what advice can you give management to improve sales?
-5. Data Visualization:
+## Projects
 
-Create a simple dashboard that visualizes sales trends. Use charts and graphs to highlight key insights and areas of concern.
-____________________________________________________________________________________________________________________________________________
+### Agatha Kihiu: health-system assessments
 
-Here's a summary and analysis based on the KBBL dashboard provided:
-### **Summary of the Dashboard:**
-## ![KBBL Dashboard](https://github.com/user-attachments/assets/cb69e827-99a0-41ac-b860-d63760686668)
-- **Total Sales Quantity:** 2,324,089 units
-- **Total SAP Value:** 8,232,223.88
-- **Number of Products:** 70
-- **Number of Outlets:** 763
-- **Top-performing products and outlets** are visualized through bar charts.
-- **Distribution of Sales Volume by Quarter:** Shows a trend of sales over different quarters.
-- **Percentage of Malt Group Sales:** A pie chart showing the distribution of sales by the Malt Group.
-- **Highest Customer Purchases:** Bar chart indicating the top customers based on purchase volume.
+Proposal and thesis materials supported by caregiver, healthcare-worker, and health-facility assessment data.
 
-### **1. Insights from the Primary Raw Data:**
-1. **Top-Selling Products:** Certain products consistently outperform others, as indicated by the bar chart displaying sales by product.
-2. **Sales Volume Trends:** There is a noticeable decline in sales volume over time, suggesting possible seasonality or other influencing factors.
-3. **Outlet Performance:** A significant number of sales are concentrated in a few top outlets, indicating disparities in performance across outlets.
+- [ERC proposal](Folder/Agatha/Dr_Agatha_Kihiu_Proposal_ERC_Final_x.copy.docx)
+- [Thesis](Folder/Agatha/Thesis%2026.11.25.docx)
+- [Caregiver data](Folder/Agatha/Dataset/Caregivers%20data.xlsx)
+- [Healthcare-worker data](Folder/Agatha/Dataset/Healthcareworkers_data.xlsx)
+- [Health-facility assessment data](Folder/Agatha/Dataset/Health%20facility%20Assessment%20Checklist%20(Responses).xlsx)
 
-### **2. Insights from the Secondary Raw Data:**
-1. **Quarterly Sales Fluctuations:** Sales volumes vary across quarters, with some quarters performing better than others, highlighting seasonality or external factors affecting sales.
-2. **Malt Group Contribution:** The pie chart reveals that a large portion of sales comes from specific Malt Groups, with one group dominating the market.
-3. **Top Customer Purchases:** A small group of customers accounts for a large share of total purchases, indicating a reliance on key accounts.
+### Augustine Gatimu: Homa Bay health and vertical HIV transmission
 
-### **3. Correlation Between Primary and Secondary Insights:**
-- **Sales Concentration:** Both data sets suggest that sales are concentrated in specific products, outlets, and customer groups, indicating a possible dependence on a limited range of factors.
-- **Seasonality and Trends:** The decline in sales volume over time and quarterly fluctuations suggest a potential correlation, possibly driven by external factors like market demand or seasonality.
+Homa Bay health-facility datasets and presentation materials for work on factors associated with vertical HIV transmission.
 
-### **4. Advice to Management:**
-1. **Diversify Product Portfolio:** Focus on boosting sales of lower-performing products to reduce dependency on top-selling items.
-2. **Improve Outlet Performance:** Invest in training and support for underperforming outlets to increase overall sales volume.
-3. **Customer Relationship Management:** Strengthen relationships with top customers while also expanding the customer base to reduce the risk of over-reliance on a few key accounts.
-# The End 
+- [Vertical HIV transmission proposal](Folder/Augustine%20Gatimu/MODELLING%20FACTORS%20ASSOCIATED%20WITH%20VERTICAL%20HIV%20TRANSMISSION-3-2.docx)
+- [Homa Bay dataset](Folder/Augustine%20Gatimu/HOMABAY%20DATASET.csv)
+- [Homa Bay health-facility data](Folder/Augustine%20Gatimu/Homabay%20health%20Facilities.csv)
+- [Variable-labelled data](Folder/Augustine%20Gatimu/data%20with%20variable%20names(4).xlsx)
+- [Presentation materials](Folder/Augustine%20Gatimu/Augustine%20Gatimu%20Njuguna.pptx)
 
-I have attached the Dataset and Some of the PivotTablesI worked on, feel free to come up with more advanced visualization and analysis.
+### Austine: Rift Valley fever (RVF) KAP analysis
 
-#GRACIAS! ADIOS
+An R Markdown analysis of a Rift Valley fever knowledge, attitudes, and practices survey, including data cleaning, missingness checks, recoding, and visualisation.
+
+- [RVF analysis](Folder/Austine/AUSTINE%20FVF.Rmd)
+- [RVF project materials](Folder/Austine/RVF)
+
+### Francis Motiri: dissertation
+
+- [Francis Motiri dissertation](Folder/Francis%20Motiri/Dissertation_Francis%20Ondicho%20Motiri_2%20November%2025-dw.docx)
+
+### Stanely: attitude analysis and modeling
+
+R-based Likert-scale analysis covering response distributions, composite attitude scores, and attitude categories, with associated proposal, thesis results, and mapped data.
+
+- [Analysis script](Folder/Stanely/Script.R)
+- [Mapped dataset](Folder/Stanely/stanley_data_mapped.xlsx)
+- [Stanely dataset](Folder/Stanely/stanely%20data.xlsx)
+- [Proposal](Folder/Stanely/proposal%202024%20(Autosaved).pdf)
+- [Thesis results](Folder/Stanely/THESIS%20RESULTS.pdf)
+
+The [Modeling](Folder/Modeling) folder contains additional copies and related modeling materials.
+
+### Wariimi Karingi: HIV, depression, and PTSD
+
+Thesis, dissertation, proposal, and presentation materials focused on HIV, depression, and post-traumatic stress disorder.
+
+- [ALHIV, depression, and PTSD study](Folder/Wariimi/ALHIV%20,depression%20and%20PTSD%2020.07.25.docx)
+- [Final thesis](Folder/Wariimi/Karingi%20FINAL.docx)
+- [Thesis draft](Folder/Wariimi/Thesis%2026.11.25.docx)
+- [Presentation](Folder/Wariimi/DR.%20WARIIMI%20KARINGI%20PRESENTATION.pptx)
+
+## Notes
+
+- Files are retained in their original project folders and formats.
+- Some scripts reference source data using local absolute paths; update those paths before running them on another machine.
+- `Init` files mark project folders that were present in the original working directory.
